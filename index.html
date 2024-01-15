@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="" alt="">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>NU Fairview Student</p>
+                <h1>Hi, I'm Hans Timothy Samson<br>this is my personal website</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="ncba.jpg" alt="Image Alt Text">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hi, my name is Hans Timothy Samson, but you can call me Hans. I'm a student at National University, pursuing a degree in BSIT-MI. I also live in Quezon City.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>HTML/CSS/JS</span><br>Web Development</li>
+                            <li><span>Python</span><br>Basic skills in Python</li>
+                            <li><span>Java</span><br>Basic skills in Java</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Went to The Seed Montessori School</span></li>
+                            <li><span>Went to Grace Flous</span></li>
+                            <li><span>Graduated at Blessed Scalabrini Institute</span></li>
+                            <li><span>Graduated at National College Business and Arts High School and Senior High School</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Section -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="subtitle">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="nutriglow.png" alt="Nutriglow">
+                    <div class="layer">
+                        <h3>Nutriglow</h3>
+                        <p>An app that helps you balance diet and workout</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="forms.png" alt="Forms">
+                    <div class="layer">
+                        <h3>Forms</h3>
+                        <p>Creating basic forms in HTML</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="gui.png" alt="GUI">
+                    <div class="layer">
+                        <h3>GUI</h3>
+                        <p>Creating basic GUI in Python</p>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fas fa-paper-plane"></i> hanssamson2316@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> 09123456901</p>
+                    
+                    <div class="social-icons">
+                        <a href="http://facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="http://gmail.com"><i class="far fa-envelope"></i></a>
+                        <a href="http://linkedin.com"><i class="fab fa-linkedin-in"></i></a>
+                     </div>
+                     
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+         
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (var i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active-link");
+            }
+
+            for (var i = 0; i < tabcontents.length; i++) {
+                tabcontents[i].classList.remove("active-tab");
+            }
+
+            document.querySelector(`#${tabname}`).classList.add("active-tab");
+            event.currentTarget.classList.add("active-link");
+        }
+    </script>
+</body>
+</html>
